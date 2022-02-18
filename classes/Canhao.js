@@ -9,6 +9,12 @@ class Canhao {
         this.base= loadImage("./assets/cannonBase.png");
     }
     mostrar(){
+    if(keyIsDown(RIGHT_ARROW)){
+    this.ang+=1;   
+    }
+    if(keyIsDown(LEFT_ARROW)){
+        this.ang-=1;   
+        }
    push();
   imageMode(CENTER);
   image(this.imagem,this.x,this.y,this.lar,this.alt);

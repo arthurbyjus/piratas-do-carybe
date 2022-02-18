@@ -5,7 +5,7 @@ const Constraint = Matter.Constraint;
 var engine, world,ground;
 var naosei;
 var torre, torreImagem;
-var angulo,canhao;
+var angulo,canhao, balacanhao;
 
 function preload() {
  naosei = loadImage("./assets/background.gif");
@@ -26,8 +26,10 @@ function setup() {
  
  torre = Bodies.rectangle(160, 350, 160, 310, options);
  World.add(world,torre);
+ angleMode(DEGREES);
  angulo=20;
  canhao=new Canhao (180,110,130,100,angulo);
+ balacanhao = new BalaCanhao(canhao.x, canhao.y);
 }
 
 function draw() {
@@ -42,4 +44,5 @@ function draw() {
  image(torreImagem, torre.position.x, torre.position.y, 160, 310);
  pop();
   canhao.mostrar();
+  balacanhao.mostrar();
 }
