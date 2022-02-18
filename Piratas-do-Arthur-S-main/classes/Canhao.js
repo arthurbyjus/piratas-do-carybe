@@ -9,10 +9,10 @@ class Canhao {
         this.base= loadImage("./assets/cannonBase.png");
     }
     mostrar(){
-    if(keyIsDown(RIGHT_ARROW)&&this.ang<70){
+    if(keyIsDown(RIGHT_ARROW)){
     this.ang +=1;   
     }
-    if(keyIsDown(LEFT_ARROW)&&this.ang>-30){
+    if(keyIsDown(LEFT_ARROW)){
         this.ang -=1;   
         }
    push();
@@ -24,5 +24,4 @@ class Canhao {
    image(this.base,70,20,200,200);
    noFill();
     }
-   
 }

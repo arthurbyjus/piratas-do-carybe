@@ -46,8 +46,3 @@ function draw() {
   canhao.mostrar();
   balacanhao.mostrar();
 }
-function keyReleased(){
-  if(keyCode===DOWN_ARROW){
-    balacanhao.atirar();
-  }
-}
